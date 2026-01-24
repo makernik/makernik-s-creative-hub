@@ -24,11 +24,11 @@ const ContactSection = () => {
           
           {/* Email CTA */}
           <a 
-            href="mailto:hello@makernik.com"
+            href="mailto:makernik27@gmail.com"
             className="group inline-flex items-center gap-3 text-xl md:text-2xl font-display font-semibold text-foreground hover:text-accent transition-colors duration-300 mb-12"
           >
             <Mail className="w-6 h-6" />
-            <span>hello@makernik.com</span>
+            <span>makernik27@gmail.com</span>
             <ArrowUpRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
           </a>
           
