@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
+import { navLinks } from "@/data";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

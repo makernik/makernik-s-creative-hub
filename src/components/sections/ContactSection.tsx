@@ -1,10 +1,5 @@
-import { Mail, Github, Twitter, Linkedin, ArrowUpRight } from "lucide-react";
-
-const socialLinks = [
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: Twitter, label: "Twitter", href: "#" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-];
+import { Mail, ArrowUpRight } from "lucide-react";
+import { socialLinks } from "@/data";
 
 const ContactSection = () => {
   return (
