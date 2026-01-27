@@ -15,20 +15,20 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm a maker at heart—someone who finds joy in building things, 
-                whether that's writing code or working with my hands. My workshop 
+                I'm a maker at heart—someone who finds joy in building things,
+                whether that's writing code or working with my hands. My workshop
                 is both a terminal and a workbench.
               </p>
               <p>
-                With a background in software engineering and a passion for 
-                hardware, I create projects that span the digital-physical divide. 
-                Every project is a chance to explore new technologies, solve 
+                With a background in software engineering and a passion for
+                hardware, I create projects that span the digital-physical divide.
+                Every project is a chance to explore new technologies, solve
                 interesting problems, and craft something meaningful.
               </p>
               <p>
-                When I'm not building, you'll find me exploring open-source 
-                communities, sketching new ideas, or deep in documentation 
-                learning about my next obsession.
+                When I'm not building, I'm tending bonsai trees. The slow, careful
+                work of pruning and shaping mirrors systems thinking—small,
+                intentional changes that compound into resilient, elegant forms.
               </p>
             </div>
           </div>
