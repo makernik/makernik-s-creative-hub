@@ -9,4 +9,12 @@ export const projects: Project[] = [
     tags: ["Web App"],
     link: "https://hidelog.lovable.app",
   },
+  {
+    title: "Maze Generator",
+    description: "An interactive maze generator exploring algorithms and emergent paths.",
+    image: "/placeholder.svg",
+    category: "digital",
+    tags: ["Algorithms", "Visualization", "Web App"],
+    slug: "maze-generator",
+  },
 ];

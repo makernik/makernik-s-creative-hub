@@ -25,4 +25,13 @@ External link: https://hidelog.lovable.app
 Image (URL or file path): /placeholder.svg
 Status: live
 Notes (optional): Replace image with real screenshot when available.
+
+Title: Maze Generator
+One-sentence description: An interactive maze generator exploring algorithms and emergent paths.
+Category: digital
+Tags (3-6): Algorithms, Visualization, Web App
+External link:
+Image (URL or file path): /placeholder.svg
+Status: in-progress
+Notes (optional): Add demo URL once hosting is live.
 ```
