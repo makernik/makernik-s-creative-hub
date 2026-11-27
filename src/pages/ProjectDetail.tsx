@@ -48,9 +48,9 @@ const ProjectDetail = () => {
           <div className="max-w-4xl mx-auto">
             {/* Back Button */}
             <Button variant="ghost" asChild className="mb-8">
-              <Link to="/#projects">
+              <Link to="/#apps">
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Projects
+                Back to apps
               </Link>
             </Button>
 

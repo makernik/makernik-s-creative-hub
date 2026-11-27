@@ -1,48 +1,17 @@
-import { Mail, ArrowUpRight } from "lucide-react";
-import { socialLinks } from "@/data";
-
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-secondary/30">
-      <div className="container px-6 md:px-8">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-xs font-medium tracking-[0.3em] uppercase text-accent mb-4">
-            Get in Touch
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Let's Build<br />Something Together
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            Have a project idea, collaboration opportunity, or just want to chat 
-            about making things? I'd love to hear from you.
-          </p>
-          
-          {/* Email CTA */}
-          <a 
-            href="mailto:makernik27@gmail.com"
-            className="group inline-flex items-center gap-3 text-xl md:text-2xl font-display font-semibold text-foreground hover:text-accent transition-colors duration-300 mb-12"
-          >
-            <Mail className="w-6 h-6" />
-            <span>makernik27@gmail.com</span>
-            <ArrowUpRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-          </a>
-          
-          {/* Social links */}
-          <div className="flex items-center justify-center gap-4">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-lg bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent/50 transition-all duration-300"
-                aria-label={social.label}
-              >
-                <social.icon className="w-5 h-5" />
-              </a>
-            ))}
-          </div>
-        </div>
+    <section id="contact" className="scroll-mt-24 border-t border-foreground/15 px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="max-w-[14ch] font-display text-4xl font-semibold text-balance md:text-6xl">Hire me</h2>
+        <p className="mt-6 max-w-[65ch] text-lg leading-relaxed text-muted-foreground">
+          Have a project idea, collaboration opportunity, or just want to chat about making things? I'd love to hear from you.
+        </p>
+        <a
+          href="mailto:makernik27@gmail.com"
+          className="mt-8 inline-flex min-h-12 items-center font-display text-2xl font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-8 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:text-3xl"
+        >
+          makernik27@gmail.com
+        </a>
       </div>
     </section>
   );
