@@ -1,79 +1,98 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { navLinks } from "@/data";
+import { featuredProject, navLinks } from "@/data";
+
+const ctaClass =
+  "min-h-11 items-center justify-center bg-accent px-4 text-sm font-semibold text-accent-foreground transition-colors hover:bg-[hsl(18_70%_30%)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[hsl(18_70%_28%)]";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const mazeLink = featuredProject?.link;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    if (!isMobileMenuOpen) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const first = menuRef.current?.querySelector<HTMLElement>("a");
+    first?.focus();
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previous;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [isMobileMenuOpen]);
+
+  const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="container px-6 md:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="#" className="font-display text-xl font-bold">
-            <span className="text-foreground">maker</span>
-            <span className="text-accent">nik</span>
-          </a>
+    <header className="sticky top-0 z-40 border-b border-foreground/10 bg-background">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:h-20 md:px-8">
+        <a href="/" className="font-display text-xl font-semibold text-foreground">
+          maker<span className="text-accent">nik</span>
+        </a>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden w-10 h-10 flex items-center justify-center text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile menu */}
-      <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-background border-b border-border transition-all duration-300 ${
-          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
-      >
-        <nav className="container px-6 py-6 flex flex-col gap-4">
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Sections">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
-              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-sm font-medium text-foreground/80 hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
             >
               {link.label}
             </a>
           ))}
         </nav>
+
+        <div className="flex items-center gap-3">
+          {mazeLink && (
+            <a href={mazeLink} className={`${ctaClass} hidden md:inline-flex`}>
+              Make a maze
+            </a>
+          )}
+          <button
+            ref={menuButtonRef}
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center text-foreground md:hidden"
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="site-menu"
+          >
+            {isMobileMenuOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
+            <span className="sr-only">{isMobileMenuOpen ? "Close menu" : "Open menu"}</span>
+          </button>
+        </div>
       </div>
+
+      {isMobileMenuOpen && (
+        <div ref={menuRef} id="site-menu" className="border-t border-foreground/10 bg-background md:hidden">
+          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4" aria-label="Sections">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="px-1 py-3 text-lg font-medium text-foreground"
+                onClick={closeMenu}
+              >
+                {link.label}
+              </a>
+            ))}
+            {mazeLink && (
+              <a href={mazeLink} className={`${ctaClass} mt-3 inline-flex`} onClick={closeMenu}>
+                Make a maze
+              </a>
+            )}
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

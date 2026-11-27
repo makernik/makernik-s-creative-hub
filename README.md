@@ -4,8 +4,8 @@ Personal creative portfolio showcasing digital and physical maker projects.
 
 ## Featured Projects
 
-- **Hidelog** — (coming soon in beta)
-- *More projects to be added*
+- **MazeMaker** — Make and Print mazes at home! Live at https://maze.makernik.com
+- **Hidelog** — A personal log. Live at https://hidelog.lovable.app
 
 ## Tech Stack
 

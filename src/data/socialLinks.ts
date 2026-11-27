@@ -1,7 +1,9 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import { SocialLink } from "@/types";
 
 export const socialLinks: SocialLink[] = [
   { icon: Github, label: "GitHub", href: "https://github.com/makernik" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/nikchaphalkar" },
+  // Handle is twitter:site in index.html. The profile URL is inferred from it.
+  { icon: Twitter, label: "X", href: "https://x.com/makernik" },
 ];
