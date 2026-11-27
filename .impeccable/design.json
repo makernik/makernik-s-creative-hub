@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-27T03:14:06Z",
+  "title": "Design System: makernik",
+  "extensions": {
+    "colorMeta": {
+      "copper": {
+        "role": "primary",
+        "displayName": "Spot Copper",
+        "canonical": "hsl(18 70% 36%)",
+        "tonalRamp": ["oklch(15% 0.130 41.5)", "oklch(26.4% 0.130 41.5)", "oklch(37.9% 0.130 41.5)", "oklch(49.3% 0.130 41.5)", "oklch(60.7% 0.130 41.5)", "oklch(72.1% 0.130 41.5)", "oklch(83.6% 0.130 41.5)", "oklch(95% 0.130 41.5)"]
+      },
+      "copper-hover": {
+        "role": "primary",
+        "displayName": "Pressed Copper",
+        "canonical": "hsl(18 70% 30%)",
+        "tonalRamp": ["oklch(15% 0.113 41.7)", "oklch(26.4% 0.113 41.7)", "oklch(37.9% 0.113 41.7)", "oklch(49.3% 0.113 41.7)", "oklch(60.7% 0.113 41.7)", "oklch(72.1% 0.113 41.7)", "oklch(83.6% 0.113 41.7)", "oklch(95% 0.113 41.7)"]
+      },
+      "copper-focus": {
+        "role": "primary",
+        "displayName": "Focus Copper",
+        "canonical": "hsl(18 70% 28%)",
+        "tonalRamp": ["oklch(15% 0.106 41.8)", "oklch(26.4% 0.106 41.8)", "oklch(37.9% 0.106 41.8)", "oklch(49.3% 0.106 41.8)", "oklch(60.7% 0.106 41.8)", "oklch(72.1% 0.106 41.8)", "oklch(83.6% 0.106 41.8)", "oklch(95% 0.106 41.8)"]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Sheet Cream",
+        "canonical": "hsl(40 30% 96%)",
+        "tonalRamp": ["oklch(15% 0.006 84.6)", "oklch(26.4% 0.006 84.6)", "oklch(37.9% 0.006 84.6)", "oklch(49.3% 0.006 84.6)", "oklch(60.7% 0.006 84.6)", "oklch(72.1% 0.006 84.6)", "oklch(83.6% 0.006 84.6)", "oklch(95% 0.006 84.6)"]
+      },
+      "field-cream": {
+        "role": "neutral",
+        "displayName": "Field Cream",
+        "canonical": "hsl(40 32% 94%)",
+        "tonalRamp": ["oklch(15% 0.009 84.6)", "oklch(26.4% 0.009 84.6)", "oklch(37.9% 0.009 84.6)", "oklch(49.3% 0.009 84.6)", "oklch(60.7% 0.009 84.6)", "oklch(72.1% 0.009 84.6)", "oklch(83.6% 0.009 84.6)", "oklch(95% 0.009 84.6)"]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Legend Stone",
+        "canonical": "hsl(35 15% 90%)",
+        "tonalRamp": ["oklch(15% 0.007 76.6)", "oklch(26.4% 0.007 76.6)", "oklch(37.9% 0.007 76.6)", "oklch(49.3% 0.007 76.6)", "oklch(60.7% 0.007 76.6)", "oklch(72.1% 0.007 76.6)", "oklch(83.6% 0.007 76.6)", "oklch(95% 0.007 76.6)"]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Charcoal Ink",
+        "canonical": "hsl(30 10% 12%)",
+        "tonalRamp": ["oklch(15% 0.007 67.5)", "oklch(26.4% 0.007 67.5)", "oklch(37.9% 0.007 67.5)", "oklch(49.3% 0.007 67.5)", "oklch(60.7% 0.007 67.5)", "oklch(72.1% 0.007 67.5)", "oklch(83.6% 0.007 67.5)", "oklch(95% 0.007 67.5)"]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "hsl(30 10% 32%)",
+        "tonalRamp": ["oklch(15% 0.017 67.4)", "oklch(26.4% 0.017 67.4)", "oklch(37.9% 0.017 67.4)", "oklch(49.3% 0.017 67.4)", "oklch(60.7% 0.017 67.4)", "oklch(72.1% 0.017 67.4)", "oklch(83.6% 0.017 67.4)", "oklch(95% 0.017 67.4)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Poster title on the maze plate." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles. 2.25rem, stepping to 3rem from 768px. The contact line steps to 3.75rem." },
+      "title": { "displayName": "Title", "purpose": "Names in a ruled row. 1.5rem, stepping to 1.875rem from 768px." },
+      "body": { "displayName": "Body", "purpose": "Reading text in Inter, held to 65ch." },
+      "label": { "displayName": "Label", "purpose": "Legend keys. Bin labels are the same size at weight 500." },
+      "action": { "displayName": "Action", "purpose": "The hero copper button. Header and stroked buttons are 0.875rem at the same weight." }
+    },
+    "motion": [
+      {
+        "name": "color",
+        "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Color, background, and border transitions on buttons and links."
+      },
+      {
+        "name": "maze-draw",
+        "value": "1700ms",
+        "purpose": "The maze walls draw once from the entrance. Progress is 1 - (1 - t) ** 3, then the drawing rests. Reduced motion paints the finished maze on the first frame."
+      },
+      {
+        "name": "scroll",
+        "value": "smooth",
+        "purpose": "Document scrolling. prefers-reduced-motion switches it to auto."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The copper action. Square, sentence case, Sheet Cream on Spot Copper.",
+      "html": "<a class=\"ds-btn-primary\" href=\"https://maze.makernik.com\">Make a maze</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 3.5rem; padding: 0 1.5rem; background: hsl(var(--accent)); color: hsl(var(--accent-foreground)); font-family: var(--font-body); font-size: 1.125rem; font-weight: 600; line-height: 1; border: none; border-radius: 0; text-decoration: none; transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-primary:hover { background: hsl(18 70% 30%); } .ds-btn-primary:focus-visible { outline: 2px solid hsl(18 70% 28%); outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "The stroked action on the legend, used to draw another maze.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">Draw another</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: 0 1rem; background: hsl(var(--background)); color: hsl(var(--foreground)); font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; border: 1px solid hsl(var(--foreground) / 0.25); border-radius: 0; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), border-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-secondary:hover { color: hsl(var(--accent)); border-color: hsl(var(--accent)); } .ds-btn-secondary:focus-visible { outline: 2px solid hsl(var(--accent)); outline-offset: 3px; }"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Sticky margin index. 4rem tall below 768px; 5rem with the section links and compact copper action from 768px.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-wordmark\" href=\"/\">maker<span>nik</span></a><nav class=\"ds-nav\" aria-label=\"Sections\"><a href=\"#apps\">Apps</a><a href=\"#builds\">Builds</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a></nav><a class=\"ds-btn-compact\" href=\"https://maze.makernik.com\">Make a maze</a></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 5rem; padding: 0 2rem; background: hsl(var(--background)); color: hsl(var(--foreground)); border-bottom: 1px solid hsl(var(--foreground) / 0.1); } .ds-wordmark { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: hsl(var(--foreground)); text-decoration: none; } .ds-wordmark span { color: hsl(var(--accent)); } .ds-nav { display: flex; align-items: center; gap: 2rem; } .ds-nav a { font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; color: hsl(var(--foreground) / 0.8); text-decoration: none; } .ds-nav a:hover { color: hsl(var(--foreground)); } .ds-nav a:focus-visible { outline: 2px solid hsl(var(--accent)); outline-offset: 4px; } .ds-btn-compact { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: 0 1rem; background: hsl(var(--accent)); color: hsl(var(--accent-foreground)); font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; text-decoration: none; border-radius: 0; transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-compact:hover { background: hsl(18 70% 30%); } .ds-btn-compact:focus-visible { outline: 2px solid hsl(18 70% 28%); outline-offset: 3px; }"
+    },
+    {
+      "name": "Title Plate",
+      "kind": "card",
+      "refersTo": "title-plate",
+      "description": "Square cream plate on the maze field: poster title, lede, and the copper action.",
+      "html": "<div class=\"ds-plate\"><h1 class=\"ds-plate-title\">MazeMaker</h1><p class=\"ds-plate-lede\">Make and Print mazes at home!</p><a class=\"ds-plate-action\" href=\"https://maze.makernik.com\">Make a maze</a></div>",
+      "css": ".ds-plate { max-width: 24rem; padding: 1.25rem; background: hsl(var(--background)); color: hsl(var(--foreground)); border: 1px solid hsl(var(--foreground) / 0.15); border-radius: 0; } .ds-plate-title { margin: 0; font-family: var(--font-display); font-size: clamp(2.75rem, 5vw, 4.5rem); font-weight: 600; line-height: 0.92; letter-spacing: -0.025em; } .ds-plate-lede { margin: 0.75rem 0 0; font-family: var(--font-body); font-size: 1.125rem; line-height: 1.56; } .ds-plate-action { display: inline-flex; align-items: center; justify-content: center; min-height: 3.5rem; margin-top: 1.25rem; padding: 0 1.5rem; background: hsl(var(--accent)); color: hsl(var(--accent-foreground)); font-family: var(--font-body); font-size: 1.125rem; font-weight: 600; text-decoration: none; border-radius: 0; transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-plate-action:hover { background: hsl(18 70% 30%); } .ds-plate-action:focus-visible { outline: 2px solid hsl(18 70% 28%); outline-offset: 3px; }"
+    },
+    {
+      "name": "Legend Band",
+      "kind": "custom",
+      "refersTo": "legend-band",
+      "description": "Stone band of facts under the maze, with a stroked action at the end.",
+      "html": "<div class=\"ds-legend\"><div><p class=\"ds-legend-key\">Kind</p><p class=\"ds-legend-val\">Web App</p></div><div><p class=\"ds-legend-key\">Status</p><p class=\"ds-legend-val\">Live</p></div><div><p class=\"ds-legend-key\">Sheet</p><p class=\"ds-legend-val\">A small web app that generates printable PDF maze packs.</p></div><a class=\"ds-legend-link\" href=\"https://maze.makernik.com\">maze.makernik.com</a></div>",
+      "css": ".ds-legend { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: 1rem; align-items: end; padding: 1rem 2rem; background: hsl(var(--secondary)); color: hsl(var(--foreground)); } .ds-legend-key { margin: 0; font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; line-height: 1.33; } .ds-legend-val { margin: 0.25rem 0 0; font-family: var(--font-body); font-size: 0.875rem; } .ds-legend-link { font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; color: hsl(var(--foreground)); text-underline-offset: 4px; text-decoration-color: hsl(var(--foreground) / 0.3); } .ds-legend-link:hover { color: hsl(var(--accent)); text-decoration-color: hsl(var(--accent)); } .ds-legend-link:focus-visible { outline: 2px solid hsl(var(--accent)); outline-offset: 4px; }"
+    },
+    {
+      "name": "Bin Label",
+      "kind": "chip",
+      "refersTo": "bin-label",
+      "description": "Square category label at the start of a build-log row.",
+      "html": "<p class=\"ds-bin\">Web App</p>",
+      "css": ".ds-bin { display: inline-block; margin: 0; padding: 0.25rem 0.5rem; background: hsl(var(--background)); color: hsl(var(--foreground)); font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; line-height: 1.33; border: 1px solid hsl(var(--foreground) / 0.25); border-radius: 0; }"
+    },
+    {
+      "name": "Build-log Row",
+      "kind": "custom",
+      "refersTo": "build-log",
+      "description": "Ruled row for another app: bin, name, status, and a short description.",
+      "html": "<article class=\"ds-log\"><p class=\"ds-log-bin\">Web App</p><h3 class=\"ds-log-title\"><a href=\"https://hidelog.lovable.app\">Hidelog</a></h3><p class=\"ds-log-status\">Live</p><p class=\"ds-log-body\">A personal log for capturing patterns, reflections, and daily notes in a simple, focused way.</p></article>",
+      "css": ".ds-log { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 1.5rem; row-gap: 0.5rem; align-items: baseline; padding: 1.5rem 0; border-top: 1px solid hsl(var(--foreground) / 0.15); color: hsl(var(--foreground)); } .ds-log-bin { margin: 0; padding: 0.25rem 0.5rem; font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; border: 1px solid hsl(var(--foreground) / 0.25); border-radius: 0; } .ds-log-title { margin: 0; font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; line-height: 1.33; letter-spacing: -0.025em; } .ds-log-title a { color: inherit; text-decoration-color: hsl(var(--foreground) / 0.25); text-underline-offset: 0.18em; } .ds-log-title a:hover { color: hsl(var(--accent)); text-decoration-color: hsl(var(--accent)); } .ds-log-title a:focus-visible { outline: 2px solid hsl(var(--accent)); outline-offset: 4px; } .ds-log-status { margin: 0; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; } .ds-log-body { grid-column: 2; max-width: 65ch; margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.625; color: hsl(var(--muted-foreground)); }"
+    },
+    {
+      "name": "Empty Photo Mount",
+      "kind": "custom",
+      "refersTo": "photo-mount",
+      "description": "Dashed mount for a photograph that is not in the repo. No stand-in image.",
+      "html": "<figure class=\"ds-mount\"><div class=\"ds-mount-frame\">Photo needed</div><figcaption>Caption pending</figcaption></figure>",
+      "css": ".ds-mount { margin: 0; max-width: 16rem; } .ds-mount-frame { display: flex; align-items: center; justify-content: center; aspect-ratio: 3 / 4; background: hsl(var(--background)); color: hsl(var(--foreground)); font-family: var(--font-display); font-size: 0.875rem; font-weight: 600; border: 1px dashed hsl(var(--foreground) / 0.3); border-radius: 0; } .ds-mount figcaption { margin-top: 0.75rem; font-family: var(--font-body); font-size: 0.875rem; line-height: 1.625; color: hsl(var(--muted-foreground)); }"
+    },
+    {
+      "name": "Email Link",
+      "kind": "custom",
+      "refersTo": "email-link",
+      "description": "The contact address, set in Space Grotesk with a copper underline.",
+      "html": "<a class=\"ds-mail\" href=\"mailto:makernik27@gmail.com\">makernik27@gmail.com</a>",
+      "css": ".ds-mail { display: inline-flex; align-items: center; min-height: 3rem; font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: hsl(var(--foreground)); text-decoration-thickness: 2px; text-decoration-color: hsl(var(--accent)); text-underline-offset: 0.5rem; } .ds-mail:hover { color: hsl(var(--accent)); } .ds-mail:focus-visible { outline: 2px solid hsl(var(--accent)); outline-offset: 4px; }"
+    },
+    {
+      "name": "Maze Field",
+      "kind": "custom",
+      "refersTo": "maze-field",
+      "description": "Graph paper only here. The shipped maze is canvas: charcoal walls, a copper start disc, and a copper exit square.",
+      "html": "<div class=\"ds-field\" role=\"img\" aria-label=\"Maze field. Graph paper, charcoal walls, a copper start, and a copper exit.\"><span class=\"ds-wall ds-wall-a\"></span><span class=\"ds-wall ds-wall-b\"></span><span class=\"ds-start\"></span><span class=\"ds-exit\"></span></div>",
+      "css": ".ds-field { position: relative; min-height: 16rem; background-color: hsl(40 32% 94%); background-image: linear-gradient(hsl(30 10% 12% / 0.11) 1px, transparent 1px), linear-gradient(90deg, hsl(30 10% 12% / 0.11) 1px, transparent 1px); background-size: 22px 22px; border-top: 1px solid hsl(var(--foreground) / 0.15); border-bottom: 1px solid hsl(var(--foreground) / 0.15); } .ds-wall { position: absolute; background: hsl(30 10% 14%); } .ds-wall-a { left: 22px; top: 66px; width: 132px; height: 3px; } .ds-wall-b { left: 154px; top: 22px; width: 3px; height: 110px; } .ds-start { position: absolute; left: 27px; top: 27px; width: 12px; height: 12px; border-radius: 50%; background: hsl(var(--accent)); } .ds-exit { position: absolute; right: 28px; bottom: 28px; width: 22px; height: 22px; border: 2px solid hsl(var(--accent)); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Paper Map",
+    "overview": "makernik is one cream sheet drawn in charcoal, with copper as the only spot of color. The homepage is a paper map whose terrain is a maze. Graph paper sits only on the maze field, a square title plate of the same cream rests on that field, and a dense legend runs along its bottom edge. Below the fold the same sheet continues as ruled rows, a bin label, and empty photo mounts.\n\nThe sheet stays quiet. Titles are large, semibold, and tightly tracked. Reading text is Inter and holds to 65 characters. Regions meet at a hairline, and nothing lifts off the page. The maze is drawn in canvas once, then it rests. A missing photograph stays an empty mount labeled Photo needed.",
+    "keyCharacteristics": [
+      "Cream sheet, charcoal ink, and copper as the only chromatic color",
+      "Square corners and hairline rules on a flat sheet",
+      "Graph paper only on the maze field",
+      "Space Grotesk for titles and Inter for text, both self-hosted",
+      "Empty photographs stay dashed mounts"
+    ],
+    "rules": [
+      {
+        "name": "The One Spot Rule",
+        "body": "Copper is the only chromatic color. It fills the primary action, colors the second half of the wordmark, marks the maze start and exit, and appears on link hover and text selection. Cream, stone, and charcoal do the rest of the drawing.",
+        "section": "colors"
+      },
+      {
+        "name": "The Graticule Rule",
+        "body": "The 22px graph paper, a 1px charcoal line at 11% opacity on Field Cream, is painted only on the maze field.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Faces Rule",
+        "body": "Space Grotesk carries titles, the wordmark, the email, and the mount label. Inter carries reading text, navigation, buttons, legend facts, and bin labels. Both are self-hosted Latin cuts from @fontsource.",
+        "section": "typography"
+      },
+      {
+        "name": "The Semibold Title Rule",
+        "body": "Titles are weight 600 with -0.025em tracking and are not set in uppercase.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sheet Rule",
+        "body": "Content sits in one column no wider than 72rem, inset 1.25rem and 2rem from 768px. Sections stack on the same cream, separated by a 15% charcoal hairline, with 5rem of vertical padding and 7rem from 768px.",
+        "section": "layout"
+      },
+      {
+        "name": "The Measure Rule",
+        "body": "Reading text stops at 65ch.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Depth is a hairline or one tonal step, Field Cream or Legend Stone. Surfaces do not cast shadows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Rule",
+        "body": "Plates, buttons, bin labels, mounts, and the header have square corners. The dashed stroke is reserved for an empty photo mount. The maze start mark stays a copper disc.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Focus Rule",
+        "body": "Keyboard focus is a 2px outline, offset 3px on controls and 4px on text links. Filled copper buttons use Focus Copper. Every other control and link uses Spot Copper.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do keep Spot Copper at hsl(18 70% 36%) or darker when it is text or a filled button on Sheet Cream.",
+      "Do draw the maze in canvas, and keep a missing photograph as a dashed mount labeled \"Photo needed\".",
+      "Do load Space Grotesk and Inter from the self-hosted @fontsource files.",
+      "Do keep plates, buttons, bins, mounts, and the header square, and separate regions with a 1px charcoal rule."
+    ],
+    "donts": [
+      "Don't introduce a second chromatic color.",
+      "Don't paint the graph-paper graticule outside the maze field.",
+      "Don't round plates, buttons, bins, or mounts.",
+      "Don't lift a surface with a drop shadow.",
+      "Don't set an action in uppercase tracked micro-type.",
+      "Don't fill an empty mount with a generated, stock, or sample image."
+    ]
+  }
+}
