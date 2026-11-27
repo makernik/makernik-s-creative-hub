@@ -23,11 +23,11 @@ export default tseslint.config(
       "@typescript-eslint/no-unused-vars": "off",
     },
   },
+  // shadcn/ui components export cva variant helpers and hooks beside the
+  // components. That is the library's public API, so Fast Refresh's
+  // component-only export rule does not apply to these files.
   {
     files: ["src/components/ui/**/*.{ts,tsx}"],
-    plugins: {
-      "react-refresh": reactRefresh,
-    },
     rules: {
       "react-refresh/only-export-components": "off",
     },

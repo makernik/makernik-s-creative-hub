@@ -36,7 +36,7 @@ Confirmed by the repo and the brief:
 - Other apps already in `src/data/projects.ts`: Hidelog only (`https://hidelog.lovable.app`). Jargon Translate is not in this repo, so it is not listed.
 - Contact method already on the site: mailto:makernik27@gmail.com.
 - Social links in `src/data/socialLinks.ts`: GitHub https://github.com/makernik and LinkedIn https://www.linkedin.com/in/nikchaphalkar. Nik does not have an X account. Do not add an X link or a `twitter:site` tag. Keep `twitter:card` and `twitter:image`.
-- Open Graph and Twitter images stay on the existing asset: `https://lovable.dev/opengraph-image-p98pqg.png`.
+- Open Graph and Twitter images use the branded preview at `public/og-image.png` (`https://hello.makernik.com/og-image.png`).
 - `npm run lint` must stay clean. Responsive, with text contrast at least 4.5:1, alt text, and visible keyboard focus.
 - There are no physical-build photographs in the repo. The gallery ships with an editable data file and obvious placeholders until Nik adds photos.
 

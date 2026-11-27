@@ -2,7 +2,9 @@ import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Project } from "@/types";
 
-const ProjectCard = ({ title, description, image, category, tags, link, github, slug }: Project) => {
+type ProjectCardProps = Project;
+
+const ProjectCard = ({ title, description, image, category, tags, link, github, slug }: ProjectCardProps) => {
   return (
     <article className="group relative bg-card rounded-lg overflow-hidden border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-lg">
       {/* Image container */}

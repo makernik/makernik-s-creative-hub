@@ -14,13 +14,13 @@ A personal creative portfolio website showcasing digital and physical maker proj
 - **State Management**: TanStack React Query 5.83.0
 - **Icons**: Lucide React 0.462.0
 - **Form Handling**: React Hook Form 7.61.1 with Zod validation
-- **Development**: Lovable tagger for component tracking
 
 ### Project Structure
 ```
 makernik-s-creative-hub/
 ├── public/              # Static assets
 │   ├── favicon.ico
+│   ├── og-image.png
 │   ├── placeholder.svg
 │   └── robots.txt
 ├── src/
@@ -192,6 +192,7 @@ makernik-s-creative-hub/
    - Meta tags in index.html
    - Open Graph tags
    - Twitter Card support
+   - Social preview image (`public/og-image.png`)
    - robots.txt configured
    - Custom domain (makernik.com)
 
@@ -200,7 +201,6 @@ makernik-s-creative-hub/
    - ESLint configuration
    - Vitest for testing (configured)
    - Path aliases (@/ for src/)
-   - Lovable tagger for component tracking
 
 6. **State Management**
    - React Query configured (ready for API calls)
