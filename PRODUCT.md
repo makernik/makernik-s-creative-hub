@@ -35,7 +35,7 @@ Confirmed by the repo and the brief:
 - MazeMaker live URL, from that repo’s README: https://maze.makernik.com. Repo description, which matches the brief: “Make and Print mazes at home!”
 - Other apps already in `src/data/projects.ts`: Hidelog only (`https://hidelog.lovable.app`). Jargon Translate is not in this repo, so it is not listed.
 - Contact method already on the site: mailto:makernik27@gmail.com.
-- Social links already in `src/data/socialLinks.ts`: GitHub https://github.com/makernik and LinkedIn https://www.linkedin.com/in/nikchaphalkar. The handle @makernik is in `index.html` (`twitter:site`). The profile URL https://x.com/makernik is inferred from that handle; the repo does not store an href.
+- Social links in `src/data/socialLinks.ts`: GitHub https://github.com/makernik and LinkedIn https://www.linkedin.com/in/nikchaphalkar. Nik does not have an X account. Do not add an X link or a `twitter:site` tag. Keep `twitter:card` and `twitter:image`.
 - Open Graph and Twitter images stay on the existing asset: `https://lovable.dev/opengraph-image-p98pqg.png`.
 - `npm run lint` must stay clean. Responsive, with text contrast at least 4.5:1, alt text, and visible keyboard focus.
 - There are no physical-build photographs in the repo. The gallery ships with an editable data file and obvious placeholders until Nik adds photos.
